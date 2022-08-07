@@ -46,8 +46,6 @@ namespace PlatformService.Controllers
             return Ok(platformReadDto);
         }
 
-
-
         [HttpPost]
         public async Task<ActionResult<PlatformReadDto>> CreatePlatform(PlatformCreateDto platformCreateDto)
         {
@@ -61,7 +59,7 @@ namespace PlatformService.Controllers
 
             return CreatedAtRoute(
                 nameof(GetPlatformById),
-                new { Id = platformReadDto.Id },
+                new { id = platformReadDto.Id },
                 platformReadDto
             );
         }
