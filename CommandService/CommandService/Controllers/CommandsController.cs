@@ -32,7 +32,7 @@ namespace CommandService.Controllers
 
             var commands = await _commandRepository.GetCommandsForPlatform(platformId);
 
-            var commandReadDtos = _mapper.Map<List<PlatformReadDto>>(commands);
+            var commandReadDtos = _mapper.Map<List<CommandReadDto>>(commands);
 
             return Ok(commandReadDtos);
         }
@@ -54,7 +54,7 @@ namespace CommandService.Controllers
                 return NotFound();
             }
 
-            var commandReadDto = _mapper.Map<PlatformReadDto>(command);
+            var commandReadDto = _mapper.Map<CommandReadDto>(command);
 
             return Ok(commandReadDto);
         }

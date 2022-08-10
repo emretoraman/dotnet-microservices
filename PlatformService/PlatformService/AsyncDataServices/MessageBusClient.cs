@@ -38,9 +38,9 @@ namespace PlatformService.AsyncDataServices
             }
         }
 
-        public void PublishNewPlatform(PlatformPublishDto platformPublishDto)
+        public void PublishNewPlatform(PlatformPublishedDto platformPublishedDto)
         {
-            var message = JsonSerializer.Serialize(platformPublishDto);
+            var message = JsonSerializer.Serialize(platformPublishedDto);
 
             if (_connection?.IsOpen == true)
             {

@@ -1,6 +1,6 @@
-﻿namespace PlatformService.Dtos
+﻿namespace CommandService.Dtos
 {
-    public class PlatformPublishDto
+    public class PlatformPublishedDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;

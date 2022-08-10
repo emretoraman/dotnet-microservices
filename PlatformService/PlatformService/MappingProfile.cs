@@ -11,7 +11,7 @@ namespace PlatformService
             // Source -> Target
             CreateMap<Platform, PlatformReadDto>();
             CreateMap<PlatformCreateDto, Platform>();
-            CreateMap<PlatformReadDto, PlatformPublishDto>();
+            CreateMap<PlatformReadDto, PlatformPublishedDto>();
         }
     }
 }

@@ -36,6 +36,12 @@ namespace CommandService.Data
             return exists;
         }
 
+        public async Task<bool> ExternalPlatformExists(int externalPlatformId)
+        {
+            var exists = await _appDbContext.Platforms.AnyAsync(p => p.ExternalId == externalPlatformId);
+            return exists;
+        }
+
         // Commands
         public async Task<IEnumerable<Command>> GetCommandsForPlatform(int platformId)
         { 

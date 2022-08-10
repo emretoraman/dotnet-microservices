@@ -81,10 +81,10 @@ namespace PlatformService.Controllers
             //Send async message
             try
             {
-                var platformPublishDto = _mapper.Map<PlatformPublishDto>(platformReadDto);
-                platformPublishDto.Event = "Platform_Published";
+                var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
+                platformPublishedDto.Event = "Platform_Published";
 
-                _messageBusClient.PublishNewPlatform(platformPublishDto);
+                _messageBusClient.PublishNewPlatform(platformPublishedDto);
             }
             catch (Exception ex)
             {

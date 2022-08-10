@@ -10,6 +10,8 @@ namespace CommandService
         {
             // Source -> Target
             CreateMap<Platform, PlatformReadDto>();
+            CreateMap<PlatformPublishedDto, Platform>()
+                .ForMember(p => p.ExternalId, o => o.MapFrom(ppd => ppd.Id));
 
             CreateMap<Command, CommandReadDto>();
             CreateMap<CommandCreateDto, Command>();
